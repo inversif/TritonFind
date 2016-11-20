@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/search">
+
+    <ImageView
+        android:scaleType="centerInside"
+        android:src="@drawable/serach"
+        android:layout_height="26dp"
+        android:layout_width="26dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Search(Date, Location, any useful information)"
+        android:gravity="bottom"
+        android:textSize="16sp" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Found"
+        android:textOff="Lost"
+        android:onClick="onToggleClicked"/>
+
+</LinearLayout>

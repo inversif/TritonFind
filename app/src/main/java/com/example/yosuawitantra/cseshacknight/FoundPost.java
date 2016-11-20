@@ -89,9 +89,7 @@ public class FoundPost extends Activity {
 
             ImageView imageView = (ImageView) findViewById(R.id.imgView);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-
         }
-
 
     }
 

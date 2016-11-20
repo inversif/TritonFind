@@ -3,6 +3,7 @@ package com.example.yosuawitantra.cseshacknight;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -23,20 +24,24 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
     ImageButton Find;
     ImageButton Home;
     ImageButton Lost;
+    ImageView imageView;
 
     @Override
     protected void onStart() { super.onStart(); }
 
-    public void getLocation(){
+    public String getLocation(){
         String location = ((EditText) findViewById(R.id.loc)).getText().toString();
+        return location;
     }
 
-    public void getDateandTime(){
+    public String getDateandTime(){
         String chronology = ((EditText) findViewById(R.id.time)).getText().toString();
+        return chronology;
     }
 
-    public void getDescription(){
+    public String getDescription(){
         String description = ((EditText) findViewById(R.id.description)).getText().toString();
+        return description;
     }
 
     public void getContact(){
@@ -44,8 +49,9 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
         String email = ((EditText) findViewById(R.id.contactme)).getText().toString();
     }
 
-    public void postPost(){
-        // More Firebase stuff
+    public Item postPost(){
+        Item i = new Item(getDescription(), getLocation(), "", getDateandTime(), "", imageView);
+        return i;
     }
 
     @Override
@@ -122,7 +128,7 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
             String picturePath = cursor.getString(columnIndex);
             cursor.close();
 
-            ImageView imageView = (ImageView) findViewById(R.id.imgView);
+            imageView = (ImageView) findViewById(R.id.imgView);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 
         }

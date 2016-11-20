@@ -33,7 +33,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="                "
+                    android:text="Description Here"
                     android:layout_weight="2"
                     android:id="@+id/itemOneT" />
 
@@ -42,6 +42,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:elevation="0dp"
+                    android:id="@+id/itemOneI"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp" />
             </LinearLayout>
 
@@ -64,6 +65,7 @@
                     android:id="@+id/itemTwoT" />
 
                 <ImageButton
+                    android:id="@+id/itemTwoI"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -89,6 +91,7 @@
                     android:id="@+id/itemThreeT" />
 
                 <ImageButton
+                    android:id="@+id/itemThreeI"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -114,6 +117,7 @@
                     android:id="@+id/itemFourT" />
 
                 <ImageButton
+                    android:id="@+id/itemFourI"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -139,6 +143,7 @@
                     android:id="@+id/itemFiveT" />
 
                 <ImageButton
+                    android:id="@+id/itemFiveI"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"

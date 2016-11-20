@@ -25,17 +25,20 @@
                 android:layout_height="100dp">
 
                 <ImageView
+                    android:id="@+id/itemOneIL"
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
                 <EditText
+                    android:id="@+id/itemOneTL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
                     android:layout_weight="2"/>
 
                 <ImageButton
+                    android:id="@+id/itemOneBL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
@@ -49,17 +52,20 @@
                 android:layout_height="100dp">
 
                 <ImageView
+                    android:id="@+id/itemTwoIL"
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
                 <EditText
+                    android:id="@+id/itemTwoTL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
                     android:layout_weight="2"/>
 
                 <ImageButton
+                    android:id="@+id/itemTwoBL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -72,17 +78,20 @@
                 android:layout_height="100dp">
 
                 <ImageView
+                    android:id="@+id/itemThreeIL"
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
                 <EditText
+                    android:id="@+id/itemThreeTL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
                     android:layout_weight="2"/>
 
                 <ImageButton
+                    android:id="@+id/itemThreeBL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -95,17 +104,20 @@
                 android:layout_height="100dp">
 
                 <ImageView
+                    android:id="@+id/itemFourIL"
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
                 <EditText
+                    android:id="@+id/itemFourTL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
                     android:layout_weight="2"/>
 
                 <ImageButton
+                    android:id="@+id/itemFourBL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
@@ -118,17 +130,20 @@
                 android:layout_height="100dp">
 
                 <ImageView
+                    android:id="@+id/itemFiveIL"
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
                 <EditText
+                    android:id="@+id/itemFiveTL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
                     android:layout_weight="2"/>
 
                 <ImageButton
+                    android:id="@+id/itemFiveBL"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_arrow_drop_down_black_24dp"
