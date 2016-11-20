@@ -22,40 +22,6 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Description:"
-        android:textSize="24sp"
-        android:layout_above="@+id/description"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Ex: Student ID"
-        android:textStyle="italic"
-        android:layout_marginBottom="96dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/holdordrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Item Status"
-        android:textSize="24sp"
-        android:layout_above="@+id/desc"
-        android:layout_alignEnd="@+id/desc"
-        android:layout_marginBottom="27dp" />
-
     <RadioGroup
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -75,17 +41,6 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/pics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Upload Picture"
-        android:textSize="24sp"
-        android:layout_above="@+id/holdordrop"
-        android:layout_alignParentStart="true" />
-
-    <Button
         android:id="@+id/buttonLoadPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,14 +52,69 @@
         android:layout_alignParentEnd="true"></Button>
 
     <Button
+        android:id="@+id/pics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Upload Picture"
+        android:textSize="24sp"
+        android:layout_below="@+id/buttonLoadPicture"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/holdordrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Item Status"
+        android:textSize="24sp"
+        android:layout_below="@+id/pics"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Description:"
+        android:textSize="24sp"
+        android:layout_above="@+id/description"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="Ex: Student ID"
+        android:textStyle="italic"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/post"
+        android:layout_alignParentStart="true" />
+
+    <Button
         android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="Post!"
         android:layout_gravity="center"
+        android:layout_marginBottom="53dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp"></Button>
+        android:layout_centerHorizontal="true"></Button>
+    <include
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        layout="@layout/foot"
+        android:id="@+id/drawer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"></include>
+
 
 </RelativeLayout>

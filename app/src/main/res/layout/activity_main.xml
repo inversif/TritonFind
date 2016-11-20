@@ -92,6 +92,19 @@ UCSD Police Department can help!"
                 android:id="@+id/feedbackForm" />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp">
 
+        </LinearLayout>
+        <include layout="@layout/foot"
+            android:id="@+id/drawer"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp">
+
+        </LinearLayout>
 </LinearLayout>
     </ScrollView>
