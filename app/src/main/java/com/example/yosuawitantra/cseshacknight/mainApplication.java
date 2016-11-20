@@ -1,43 +1,37 @@
 package com.example.yosuawitantra.cseshacknight;
 
-import android.app.Application;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ToggleButton;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+/**
+ * Created by Yosua Witantra on 11/20/2016.
+ */
 
-public class mainApplication extends Application {
-    private DatabaseReference database;
-    private DataSnapshot currentSnapshot;
+public class MainApplication extends AppCompatActivity implements View.OnClickListener{
+    Item list_of_item;
 
     @Override
-    public void onCreate() {
-        super.onCreate();
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_app);
 
-        FirebaseApp.initializeApp(this);
-
-        database = FirebaseDatabase.getInstance().getReference();
+        /* setup access to the main application class */
+        ((ToggleButton)findViewById(R.id.togglebutton).setOnClickListener(this);
     }
 
-    public void sendData(String type, Object item) {
-        DatabaseReference itemReference = database.child(type);
-        itemReference.setValue(item);
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
-    public void getData() {
-        database.addValueEventListener( new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    currentSnapshot = dataSnapshot;
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                }
-            }
-        );
+    @Override
+    public void onClick(View v) {
+        switch (v.getId() ) {
+            case R.id.togglebutton:
+                break;
+        }
     }
 }
