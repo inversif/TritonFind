@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 /**
@@ -19,6 +20,9 @@ import android.widget.ImageView;
 public class LostPost extends AppCompatActivity implements View.OnClickListener {
 
     static int LOST_RESULT_LOAD_IMAGE = 1;
+    ImageButton Find;
+    ImageButton Home;
+    ImageButton Lost;
 
     @Override
     protected void onStart() { super.onStart(); }
@@ -58,6 +62,34 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found);
 
+        Find = (ImageButton) findViewById(R.id.find);
+        Home = (ImageButton) findViewById(R.id.home);
+        Lost = (ImageButton) findViewById(R.id.lost);
+
+        Lost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), LostPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
+        Find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), FoundPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), MainActivity.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
         Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);
         buttonLoadImage.setOnClickListener(new View.OnClickListener() {
 

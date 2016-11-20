@@ -31,25 +31,33 @@ public class LostList extends AppCompatActivity {
         FoundHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LostList.this, FoundList.class));
+                Intent mainActivityIntent = new Intent(getApplication(), FoundList.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
             }
         });
         Lost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LostList.this, LostPost.class));
+                Intent mainActivityIntent = new Intent(getApplication(), LostPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
             }
         });
         Find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LostList.this, FoundPost.class));
+                Intent mainActivityIntent = new Intent(getApplication(), FoundPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
             }
         });
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LostList.this, MainActivity.class));
+                Intent mainActivityIntent = new Intent(getApplication(), MainActivity.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
             }
         });
 
