@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yosuawitantra.cseshacknight.Lost">
+
+    <TextView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Photo"
+        android:textSize="24sp"
+        android:layout_marginBottom="94dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Contact Me"
+        android:textSize="24sp"
+        android:layout_marginBottom="94dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Last Seen At"
+        android:textSize="24sp"
+        android:layout_marginBottom="73dp"
+        android:layout_alignBottom="@+id/description"
+        android:layout_alignStart="@+id/description" />
+
+    <TextView
+        android:id="@+id/datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Date and Time"
+        android:textSize="24sp"
+        android:layout_above="@+id/location"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Description"
+        android:textSize="24sp"
+        android:layout_above="@+id/contact"
+        android:layout_alignEnd="@+id/contact"
+        android:layout_marginBottom="79dp" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="Ex: Student ID"
+        android:textStyle="italic"
+        android:layout_below="@+id/location"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="Ex: Geisel Library"
+        android:textStyle="italic"
+        android:layout_alignBaseline="@+id/location"
+        android:layout_alignBottom="@+id/location"
+        android:layout_toEndOf="@+id/datetime" />
+
+    <EditText
+        android:id="@+id/contactme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="kiminonawa@ucsd.edu"
+        android:textStyle="italic"
+        android:layout_alignBaseline="@+id/contact"
+        android:layout_alignBottom="@+id/contact"
+        android:layout_toEndOf="@+id/datetime" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Post!"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"></Button>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="Tuesday, November 9 2001"
+        android:textStyle="italic"
+        android:layout_alignBaseline="@+id/datetime"
+        android:layout_alignBottom="@+id/datetime"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/loadPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Load Picture"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"></Button>
+
+</RelativeLayout>
