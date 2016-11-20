@@ -21,24 +21,6 @@
         android:weightSum="2">
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imgView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"></ImageView>
-
-
-    <TextView
-        android:id="@+id/holdordrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Item Status"
-        android:textSize="24sp"
-        android:layout_below="@+id/buttonLoadPicture"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp" />
 
     <TextView
         android:id="@+id/desc"
@@ -62,13 +44,24 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:id="@+id/holdordrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Item Status"
+        android:textSize="24sp"
+        android:layout_above="@+id/desc"
+        android:layout_alignEnd="@+id/desc"
+        android:layout_marginBottom="27dp" />
+
     <RadioGroup
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="17dp"
-        android:layout_below="@+id/holdordrop"
-        android:layout_alignParentStart="true">
+        android:layout_alignTop="@+id/holdordrop"
+        android:layout_toEndOf="@+id/holdordrop">
         <RadioButton android:id="@+id/hold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
