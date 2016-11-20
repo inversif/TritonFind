@@ -24,7 +24,9 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
     ImageButton Find;
     ImageButton Home;
     ImageButton Lost;
+    Button Post;
     ImageView imageView;
+    ImageButton ViewList;
 
     @Override
     protected void onStart() { super.onStart(); }
@@ -49,7 +51,7 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
         String email = ((EditText) findViewById(R.id.contactme)).getText().toString();
     }
 
-    public Item postPost(){
+    public Item postPost() {
         Item i = new Item(getDescription(), getLocation(), "", getDateandTime(), "", imageView);
         return i;
     }
@@ -67,10 +69,29 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found);
-
         Find = (ImageButton) findViewById(R.id.find);
         Home = (ImageButton) findViewById(R.id.home);
         Lost = (ImageButton) findViewById(R.id.lost);
+        Post = (Button) findViewById(R.id.post);
+        ViewList = (ImageButton) findViewById(R.id.ViewList);
+
+        ViewList .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), FoundList.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
+
+        Post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), confirm_success.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
 
         Lost.setOnClickListener(new View.OnClickListener() {
             @Override

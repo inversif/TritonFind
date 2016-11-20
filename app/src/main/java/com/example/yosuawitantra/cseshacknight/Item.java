@@ -88,8 +88,24 @@ public class Item
         Time = "Default";
         Image = new ImageView(null);
     }
+    public Item(String nameOfTheItem,
+            String locationFound,
+            String locationLost,
+            String locationDropOff,
+            String Date,
+            String Time,
+            ImageView Image)
+    {
+        this.nameOfTheItem = nameOfTheItem;
+        this.locationFound =locationFound;
+        this.locationLost =locationLost;
+        this.locationDropOff=locationDropOff;
+        this.Date=Date;
+        this.Time=Time;
+        this.Image=Image;
+    }
 
-    //Constructor
+    /*
     public Item(String nm, String locF, String locL, String locDF, String da, String ti, ImageView img) {
         nameOfTheItem = nm;
         locationFound = locF;
@@ -98,5 +114,5 @@ public class Item
         Date = da;  //te lost or found date.
         Time = ti;
         Image = img;
-    }
+    }*/
 }

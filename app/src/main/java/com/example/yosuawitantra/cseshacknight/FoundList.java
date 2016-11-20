@@ -16,6 +16,7 @@ public class FoundList extends AppCompatActivity {
     ImageButton Find;
     ImageButton Home;
     ImageButton Lost;
+    ImageButton ViewList;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.found);
@@ -23,6 +24,16 @@ public class FoundList extends AppCompatActivity {
         Find = (ImageButton) findViewById(R.id.find);
         Home = (ImageButton) findViewById(R.id.home);
         Lost = (ImageButton) findViewById(R.id.lost);
+        ViewList = (ImageButton) findViewById(R.id.ViewList);
+
+        ViewList .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), FoundList.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
 
         LostHeader.setOnClickListener(new View.OnClickListener() {
             @Override
