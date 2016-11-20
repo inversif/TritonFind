@@ -19,6 +19,8 @@ public class FoundPost extends Activity {
     ImageButton Find;
     ImageButton Home;
     ImageButton Lost;
+    Button Post;
+    ImageButton ViewList;
     private static int RESULT_LOAD_IMAGE = 1;
 
 
@@ -29,8 +31,26 @@ public class FoundPost extends Activity {
         Find = (ImageButton) findViewById(R.id.find);
         Home = (ImageButton) findViewById(R.id.home);
         Lost = (ImageButton) findViewById(R.id.lost);
+        Post = (Button) findViewById(R.id.post);
+        ViewList = (ImageButton) findViewById(R.id.ViewList);
 
+        ViewList .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), FoundList.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
 
+        Post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), confirm_success.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
         Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);
         buttonLoadImage.setOnClickListener(new View.OnClickListener() {
 
