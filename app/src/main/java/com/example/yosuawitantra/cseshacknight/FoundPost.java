@@ -10,12 +10,15 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 
 public class FoundPost extends Activity {
 
-
+    ImageButton Find;
+    ImageButton Home;
+    ImageButton Lost;
     private static int RESULT_LOAD_IMAGE = 1;
 
 
@@ -23,6 +26,10 @@ public class FoundPost extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found);
+        Find = (ImageButton) findViewById(R.id.find);
+        Home = (ImageButton) findViewById(R.id.home);
+        Lost = (ImageButton) findViewById(R.id.lost);
+
 
         Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);
         buttonLoadImage.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +42,30 @@ public class FoundPost extends Activity {
                         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
                 startActivityForResult(i, RESULT_LOAD_IMAGE);
+            }
+        });
+        Lost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), LostPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
+        Find.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), FoundPost.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
+            }
+        });
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent = new Intent(getApplication(), MainActivity.class);
+                mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(mainActivityIntent);
             }
         });
     }
