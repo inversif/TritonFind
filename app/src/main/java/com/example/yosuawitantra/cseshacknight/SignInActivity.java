@@ -40,7 +40,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                 .build();
 
         /* listen for the button click */
-        findViewById(R.id.signButton).setOnClickListener(this);
+        findViewById(R.id.sign_in_button).setOnClickListener(this);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     public void onClick(View v) {
         switch( v.getId() ) {
-            case R.id.signButton:
+            case R.id.sign_in_button:
                 signin();
                 break;
         }
@@ -77,13 +77,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     private void handleSignInResult( GoogleSignInResult result ) {
         /* if the user was able to log in */
         if ( result.isSuccess() ) {
-            /* get a handle of the user account */
-            GoogleSignInAccount account = result.getSignInAccount();
-
-            /* set the main app user */
-            //mApplication.setUser( new User( account.getDisplayName(), account.getEmail() ) );
-            //mApplication.setLoggedIn(true);
-
             Intent mainActivityIntent = new Intent(getApplication(), MainActivity.class);
             mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(mainActivityIntent);
