@@ -27,16 +27,18 @@
         android:orientation="horizontal"
         android:layout_width="match_parent">
 
-        <TextView
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:text="Found"
             android:gravity="center"
             android:textSize="16sp"
             android:textColor="@android:color/black"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/FoundHeader" />
 
-        <TextView
+        <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:text="Lost"

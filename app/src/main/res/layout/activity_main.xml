@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:layout_margin="12dp">
         <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:orientation="vertical">
 
 
@@ -37,7 +37,10 @@
 UCSD Police Department can help!"
         android:layout_below="@+id/pageTitle"
         android:layout_alignParentStart="false"
-        android:layout_margin="5dp" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
 
             <TextView
         android:text="If you lost something then...
@@ -89,5 +92,6 @@ UCSD Police Department can help!"
                 android:id="@+id/feedbackForm" />
 
         </LinearLayout>
+
 </LinearLayout>
     </ScrollView>

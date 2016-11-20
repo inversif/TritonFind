@@ -23,6 +23,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LostPost"
+            android:label="LOSTPOST">
+        </activity>
+        <activity
+            android:name=".FoundPost"
+            android:label="FoundPost">
+        </activity>
+        <activity
+            android:name=".FoundList"
+            android:label="FoundList">
+        </activity>
+        <activity
+            android:name=".LostList"
+            android:label="LostList">
+        </activity>
 
         <activity
             android:name=".MainActivity"
