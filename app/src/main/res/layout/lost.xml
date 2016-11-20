@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
@@ -99,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
@@ -138,13 +138,11 @@
         </LinearLayout>
         <include layout="@layout/foot"
             android:id="@+id/drawer"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp">
-
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
 
     </LinearLayout>
-
+    </LinearLayout>
 </ScrollView>

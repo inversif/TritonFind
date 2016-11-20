@@ -44,34 +44,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-
-    <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Post!"
-        android:layout_gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp"></Button>
-
-    <ImageView
-        android:id="@+id/imgView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_below="@+id/favoriteLocationLayout"></ImageView>
-
-    <Button
-        android:id="@+id/buttonLoadPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Load Picture"
-        android:layout_gravity="center"
-        android:layout_alignEnd="@+id/holdordrop"></Button>
-
     <TextView
         android:id="@+id/holdordrop"
         android:layout_width="wrap_content"
@@ -101,4 +73,38 @@
             android:text="Drop Item"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
+
+    <Button
+        android:id="@+id/pics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Upload Picture"
+        android:textSize="24sp"
+        android:layout_above="@+id/holdordrop"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Load Picture"
+        android:layout_gravity="center"
+        android:layout_marginTop="67dp"
+        android:layout_below="@+id/favoriteLocationLayout"
+        android:layout_alignParentEnd="true"></Button>
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Post!"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"></Button>
+
 </RelativeLayout>

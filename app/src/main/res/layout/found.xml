@@ -27,13 +27,15 @@
                 <ImageView
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemOneP" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/itemOneT" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -51,13 +53,15 @@
                 <ImageView
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemTwoP" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/itemTwoT" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -74,13 +78,15 @@
                 <ImageView
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemThreeP" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/itemThreeT" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -97,13 +103,15 @@
                 <ImageView
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemFourP" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/itemFourT" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -120,13 +128,15 @@
                 <ImageView
                     android:layout_weight="1.5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemFiveP" />
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="                "
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:id="@+id/itemFiveT" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -136,6 +146,7 @@
             </LinearLayout>
 
             </LinearLayout>
+
         <include layout="@layout/foot"
             android:id="@+id/drawer"/>
         <LinearLayout
