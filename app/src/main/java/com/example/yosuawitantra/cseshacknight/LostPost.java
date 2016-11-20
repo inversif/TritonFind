@@ -45,7 +45,7 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void postPost(){
-        // More Firebase stuff
+
     }
 
     @Override
@@ -61,7 +61,6 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found);
-
         Find = (ImageButton) findViewById(R.id.find);
         Home = (ImageButton) findViewById(R.id.home);
         Lost = (ImageButton) findViewById(R.id.lost);

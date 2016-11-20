@@ -1,5 +1,7 @@
 package com.example.yosuawitantra.cseshacknight;
 
+import android.widget.ImageView;
+
 import java.sql.Time;
 
 /**
@@ -15,7 +17,7 @@ public class Item
     private String locationDropOff;
     private String Date;  //te lost or found date.
     private String Time;
-    //private String Image;
+    private ImageView Image;
 
     //Member Methods
 
@@ -44,6 +46,7 @@ public class Item
     {
         return Time;
     }
+    public ImageView getImage(){return Image;}
     //public static void getImage();
 
     //Mutator Function
@@ -77,6 +80,8 @@ public class Item
         Time = new_time;
     }
 
+    public void setImage(ImageView new_image){ Image = new_image;}
+
     //Constructor
     public Item() {
         nameOfTheItem = "Default";
@@ -85,6 +90,23 @@ public class Item
         locationDropOff = "Default ";
         Date = "Default";  //te lost or found date.
         Time = "Default";
+        Image = null;
+    }
+    public Item(String nameOfTheItem,
+            String locationFound,
+            String locationLost,
+            String locationDropOff,
+            String Date,
+            String Time,
+            ImageView Image)
+    {
+        this.nameOfTheItem = nameOfTheItem;
+        this.locationFound =locationFound;
+        this.locationLost =locationLost;
+        this.locationDropOff=locationDropOff;
+        this.Date=Date;
+        this.Time=Time;
+        this.Image=Image;
     }
 
 }

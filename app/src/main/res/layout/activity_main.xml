@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="12dp">
+
         <LinearLayout
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="80dp">
 
 
     <TextView
@@ -75,7 +77,9 @@ UCSD Police Department can help!"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/UCSDPDLink"
-                android:text="UCSD Police Department"
+                android:autoLink="all"
+                android:clickable="true"
+                android:text="http://police.ucsd.edu/services/lost.html"
                 android:layout_marginBottom="3.5dp" />
 
             <TextView
@@ -90,19 +94,30 @@ UCSD Police Department can help!"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/feedbackForm" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:clickable="true"
+                android:text="https://goo.gl/forms/uP6M40HoNiZNx1A52"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp">
 
         </LinearLayout>
+
         <include layout="@layout/foot"
             android:id="@+id/drawer"/>
+
         <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
             android:layout_marginBottom="25dp">
 
         </LinearLayout>
