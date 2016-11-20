@@ -27,18 +27,34 @@
         <activity
             android:name=".LostPost"
             android:label="LOSTPOST">
+            <intent-filter>
+                <action android:name="android.intent.action.LOSTPOST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".FoundPost"
             android:label="FoundPost">
+            <intent-filter>
+                <action android:name="android.intent.action.FoundPost" />
+                <category android:name="android.intent.category.FoundPost" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".FoundList"
             android:label="FoundList">
+            <intent-filter>
+                <action android:name="android.intent.action.FoundList" />
+                <category android:name="android.intent.category.FoundList" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".LostList"
             android:label="LostList">
+            <intent-filter>
+                <action android:name="android.intent.action.FoundList" />
+                <category android:name="android.intent.category.FoundList" />
+            </intent-filter>
         </activity>
 
         <activity

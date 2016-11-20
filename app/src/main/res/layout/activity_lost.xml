@@ -17,51 +17,6 @@
         android:layout_marginBottom="94dp"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:id="@+id/contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Contact Me"
-        android:textSize="24sp"
-        android:layout_marginBottom="94dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Last Seen At"
-        android:textSize="24sp"
-        android:layout_marginBottom="73dp"
-        android:layout_alignBottom="@+id/description"
-        android:layout_alignStart="@+id/description" />
-
-    <TextView
-        android:id="@+id/datetime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:paddingTop="16dp"
-        android:text="Date and Time"
-        android:textSize="24sp"
-        android:layout_above="@+id/location"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Ex: Student ID"
-        android:textStyle="italic"
-        android:layout_below="@+id/location"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:id="@+id/loc"
         android:layout_width="match_parent"
@@ -83,17 +38,6 @@
         android:layout_alignBaseline="@+id/contact"
         android:layout_alignBottom="@+id/contact"
         android:layout_toEndOf="@+id/datetime" />
-
-    <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Post!"
-        android:layout_gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp"></Button>
 
     <EditText
         android:id="@+id/time"
@@ -120,6 +64,40 @@
         android:layout_gravity="center"></Button>
 
     <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Last Seen At"
+        android:textSize="24sp"
+        android:layout_below="@+id/picture"
+        android:layout_alignStart="@+id/description"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Date and Time"
+        android:textSize="24sp"
+        android:layout_below="@+id/picture"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:hint="Ex: Student ID"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/description"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp" />
+
+    <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -127,8 +105,38 @@
         android:paddingTop="16dp"
         android:text="Description"
         android:textSize="24sp"
-        android:layout_marginBottom="59dp"
-        android:layout_above="@+id/contact"
+        android:layout_below="@+id/loc"
         android:layout_alignEnd="@+id/contact" />
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="16dp"
+        android:text="Contact Me"
+        android:textSize="24sp"
+        android:layout_below="@+id/desc"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Post!"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/contactme"
+        android:layout_centerHorizontal="true"></Button>
+
+    <include
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        layout="@layout/foot"
+        android:id="@+id/drawer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"></include>
+
 
 </RelativeLayout>
