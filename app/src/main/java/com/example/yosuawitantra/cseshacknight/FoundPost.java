@@ -3,19 +3,23 @@ package com.example.yosuawitantra.cseshacknight;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+
+import static android.R.attr.button;
 
 /**
- * Created by Yosua Witantra on 11/20/2016.
+ * Created by Yosua Witantra on 11/19/2016.
  */
 
-public class Lost extends AppCompatActivity implements View.OnClickListener {
+public class FoundPost extends AppCompatActivity implements View.OnClickListener {
 
-    static int LOST_RESULT_LOAD_IMAGE = 22273;
+    static final int FOUND_RESULT_LOAD_IMAGE = 9001;
 
     @Override
     protected void onStart() { super.onStart(); }
@@ -25,37 +29,41 @@ public class Lost extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
     }
 
-    public void getLocation(){
-        String location = ((EditText) findViewById(R.id.loc)).getText().toString();
-    }
-
-    public void getDateandTime(){
-        String chronology = ((EditText) findViewById(R.id.time)).getText().toString();
-    }
-
-    public void getDescription(){
+    public void createDescription() {
         String description = ((EditText) findViewById(R.id.description)).getText().toString();
     }
 
-    public void getContact(){
-        // Should GET email from Firebase, perhaps?
-        String email = ((EditText) findViewById(R.id.contactme)).getText().toString();
-    }
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
 
-    public void postPost(){
-        // More Firebase stuff
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.hold:
+                if (checked)
+                    // Do something??
+                    break;
+            case R.id.drop:
+                if (checked)
+                    // Do something??
+                    break;
+        }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.buttonLoadPicture:
+                uploadPhotos();
+                break;
             case R.id.post:
                 postPost();
                 break;
-            case R.id.loadPicture:
-                uploadPhotos();
-                break;
         }
+    }
+
+    public void postPost() {
+        // Jose implement database plz
     }
 
     // SOURCE: http://viralpatel.net/blogs/pick-image-from-galary-android-app/
@@ -63,14 +71,14 @@ public class Lost extends AppCompatActivity implements View.OnClickListener {
         Intent upload = new Intent(
                 Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
-        startActivityForResult(upload, LOST_RESULT_LOAD_IMAGE);
+        startActivityForResult(upload, FOUND_RESULT_LOAD_IMAGE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == LOST_RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+        if (requestCode == FOUND_RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
             Uri selectedImage = data.getData();
             String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
