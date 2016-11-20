@@ -1,3 +1,5 @@
+package com.example.yosuawitantra.cseshacknight;
+
 import java.sql.Time;
 
 /**
@@ -28,7 +30,7 @@ public class Item
     }
     public String getLocationLost()
     {
-        return locationLost();
+        return locationLost;
     }
     public String getLocationDropOff()
     {
@@ -57,7 +59,7 @@ public class Item
 
     public void setLocationDropOff(String location_DropOff)
     {
-        locationDropOff = Location_DropOff;
+        locationDropOff = location_DropOff;
     }
 
     public void setLocationLost(String location_lost)

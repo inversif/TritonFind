@@ -2,12 +2,15 @@ package com.example.yosuawitantra.cseshacknight;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 /**
  * Created by Yosua Witantra on 11/20/2016.
@@ -15,15 +18,10 @@ import android.widget.EditText;
 
 public class LostPost extends AppCompatActivity implements View.OnClickListener {
 
-    static int LOST_RESULT_LOAD_IMAGE = 22273;
+    static int LOST_RESULT_LOAD_IMAGE = 1;
 
     @Override
     protected void onStart() { super.onStart(); }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     public void getLocation(){
         String location = ((EditText) findViewById(R.id.loc)).getText().toString();
@@ -52,19 +50,29 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
             case R.id.post:
                 postPost();
                 break;
-            case R.id.loadPicture:
-                uploadPhotos();
-                break;
         }
     }
 
-    // SOURCE: http://viralpatel.net/blogs/pick-image-from-galary-android-app/
-    public void uploadPhotos() {
-        Intent upload = new Intent(
-                Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_found);
 
-        startActivityForResult(upload, LOST_RESULT_LOAD_IMAGE);
+        Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);
+        buttonLoadImage.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, LOST_RESULT_LOAD_IMAGE);
+            }
+        });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -82,8 +90,11 @@ public class LostPost extends AppCompatActivity implements View.OnClickListener 
             String picturePath = cursor.getString(columnIndex);
             cursor.close();
 
-            // String picturePath contains the path of selected Image
+            ImageView imageView = (ImageView) findViewById(R.id.imgView);
+            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+
         }
+
 
     }
 }
