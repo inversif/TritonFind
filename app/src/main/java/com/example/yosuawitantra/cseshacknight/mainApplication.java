@@ -18,7 +18,8 @@ public class mainApplication extends Application {
         super.onCreate();
 
         FirebaseApp.initializeApp(this);
-        database = FirebaseDatabase.getInstance().getReference("https://popping-torch-2292.firebaseio.com/");
+
+        database = FirebaseDatabase.getInstance().getReference();
     }
 
     public void sendData(String type, Object item) {
