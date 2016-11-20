@@ -1,33 +1,27 @@
 {
   "project_info": {
-    "project_number": "8705210395",
-    "project_id": "tritonfind"
+    "project_number": "604673918697",
+    "firebase_url": "https://popping-torch-2292.firebaseio.com",
+    "project_id": "popping-torch-2292",
+    "storage_bucket": "popping-torch-2292.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:8705210395:android:db69933c4b510b8f",
+        "mobilesdk_app_id": "1:604673918697:android:db69933c4b510b8f",
         "android_client_info": {
           "package_name": "com.example.yosuawitantra.cseshacknight"
         }
       },
       "oauth_client": [
         {
-          "client_id": "8705210395-uq02ni8pe7kkq6jdgvjce939mg5t79j4.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.yosuawitantra.cseshacknight",
-            "certificate_hash": "F216397EF4F24F6855C618275669E1266DF85E1A"
-          }
-        },
-        {
-          "client_id": "8705210395-jm272dgfq5f8edpjdqcogpns8obgi1q9.apps.googleusercontent.com",
+          "client_id": "604673918697-hhr1gipmm3kobjp9he8purok6c7qncho.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBOshjJwCBBtoZkQxa-cCkYz_lB0KHqguU"
+          "current_key": "AIzaSyB86MKxEuOYHeijpIZWEAUV2vJCA0_9POg"
         }
       ],
       "services": {
@@ -39,7 +33,7 @@
           "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
