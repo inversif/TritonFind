@@ -77,7 +77,7 @@ public class Item
 
     //Constructor
     public Item() {
-        nameOfTheItem = "Default Item name ";
+        nameOfTheItem = "Default";
         locationFound = "Default";
         locationLost = "Default";
         locationDropOff = "Default ";
